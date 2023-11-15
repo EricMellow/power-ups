@@ -36,6 +36,10 @@ function save() {
 saveButton.addEventListener('click', function() {save()});
 cancelButton.addEventListener('click', function() {cancel()});
 
+messageInput.addEventListener('input', function() {
+  console.log('hit', messageInput.value)
+})
+
 //Enters range and generates random number
 rangeButton.addEventListener('click', function() {
   randomNumber = GenerateRandomNumber();
