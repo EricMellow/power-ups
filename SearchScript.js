@@ -32,8 +32,8 @@ function save() {
     ComposerHandler.sendMessage('data', ansCustomEmbed);
 }
 
-saveButton.addEventListener('click', save());
-cancelButton.addEventListener('click', cancel());
+saveButton.addEventListener('click', function() {save()});
+cancelButton.addEventListener('click', function() {cancel()});
 
 //Enters range and generates random number
 rangeButton.addEventListener('click', function() {
