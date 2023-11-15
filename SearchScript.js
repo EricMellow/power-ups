@@ -12,6 +12,7 @@ function cancel() {
 }
 
 function init() {
+  console.log('INIT!!!!!!'
   ComposerHandler.sendMessage('ready', {
       height: document.documentElement.scrollHeight,
     });
