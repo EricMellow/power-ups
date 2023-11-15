@@ -12,7 +12,7 @@ function cancel() {
 }
 
 function init() {
-  console.log('INIT!!!!!!'
+  console.log('INIT!!!!!!')
   ComposerHandler.sendMessage('ready', {
       height: document.documentElement.scrollHeight,
     });
@@ -39,20 +39,4 @@ cancelButton.addEventListener('click', function() {cancel()});
 messageInput.addEventListener('input', function() {
   console.log('hit', messageInput.value)
 })
-
-//Enters range and generates random number
-rangeButton.addEventListener('click', function() {
-  randomNumber = GenerateRandomNumber();
-  document.querySelector('.guess-words').innerText = 'Enter a guess between ' + minNum + ' and ' + maxNum + '.';
-  rangeButton.classList.remove('button-enabled');
-});
-
-//Button enable for min-max input
-maxNum.addEventListener('keyup', function() {
-  if (parseInt(minNum.value) < parseInt(maxNum.value)) {
-    rangeButton.classList.add('button-enabled');
-  } else {
-    rangeButton.classList.remove('button-enabled');
-  };
-});
 
