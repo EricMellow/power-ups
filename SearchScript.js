@@ -1,13 +1,6 @@
-var guessButton = document.querySelector('.guess-button');
-var clearButton = document.querySelector('.clear-button');
-var lastGuess = document.querySelector('.last-guess');
-var resetButton = document.querySelector('#reset');
-var hint = document.querySelector('.hint');
-var userGuess = document.querySelector('.user-guess');
-var minNum = document.querySelector('.min-num');
-var maxNum = document.querySelector('.max-num');
-var rangeButton = document.querySelector('.range');
-var randomNumber;
+var cancelButton = document.querySelector('.cancel-btn');
+var saveButton = document.querySelector('.save-btn');
+var messageInput = document.querySelector('.search-input');
 
 //Enters range and generates random number
 rangeButton.addEventListener('click', function() {
