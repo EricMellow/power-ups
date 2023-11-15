@@ -7,6 +7,7 @@ var saveButton = document.querySelector('.save-btn');
 var messageInput = document.querySelector('.search-input');
 
 function cancel() {
+  console.log('SEARCH CANCEL')
   ComposerHandler.sendMessage('cancel');
 }
 
@@ -19,6 +20,8 @@ function init() {
 function save() {
   const ansStarter = ComposerHandler.getStarterPowerUpANS();
   const headline = messageInput.value
+  console.log(ansStarter)
+  console.log('HEADLINE', headline)
   const ansCustomEmbed = {
       ...ansStarter,
       config: {
