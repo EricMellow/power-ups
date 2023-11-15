@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="powerup.css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" 
+    rel="stylesheet">
+    <title>Number Guesser</title>
+  </head>
+  <body>
+    <header>
+      <h1>Number <span class="light-weight">Guesser</span></h1>
+    </header>
+    <section>
+      <input type="number" name="min" class="min-num" placeholder="Min">
+      <button class = "range">Enter your range</button>
+      <input type="number" name="max" class="max-num" placeholder="Max">
+      <p class = "guess-words"></p>
+      <input type="text" name="userinput" class="user-guess" 
+      placeholder="Enter your guess">
+      <button class="guess-button">Guess</button>
+      <button class="clear-button">Clear</button>
+      <p class="first-sentence">Your last guess was</p>
+      <p class="last-guess">XX</p>
+      <p class="hint"></p>
+      <button id="reset" class="reset">Reset</button>
+    </section>
+    <script type="text/javascript" src="NumberScript.js"></script>
+</body>
+</html>
