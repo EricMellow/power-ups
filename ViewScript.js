@@ -39,5 +39,5 @@ function init() {
     });
   const savedMessage = getPayload()
   console.log(savedMessage)
-  message.innerText = savedMessage.data?.config?.headline;
+  message.innerText = savedMessage.config?.headline;
 }
