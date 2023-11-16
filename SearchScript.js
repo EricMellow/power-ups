@@ -4,19 +4,19 @@ var cancelButton = document.querySelector('.cancel-btn');
 var saveButton = document.querySelector('.save-btn');
 var messageInput = document.querySelector('.search-input');
 
-function cancel() {
+function cancel(){
   console.log('SEARCH CANCEL')
   ComposerHandler.sendMessage('cancel');
 }
 
-function init() {
+function init(){
   console.log('INIT!!!!!!')
   ComposerHandler.sendMessage('ready', {
       height: document.documentElement.scrollHeight,
     });
 }
 
-function save() {
+function save(){
   const ansStarter = ComposerHandler.getStarterPowerUpANS();
   const headline = messageInput.value
   console.log(ansStarter)
