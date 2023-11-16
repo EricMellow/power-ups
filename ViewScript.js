@@ -15,6 +15,21 @@ function parseQueryString(key) {
   return url.searchParams.get(key);
 };
 
+function sendMessage(action, data = {}) {
+  if (typeof window !== 'undefined') {
+    const messagePayload = {
+      source: 'custom_embed',
+      action,
+      data,
+      key: parseQueryString('k'),
+    };
+    if (action === 'ready') {
+      messagePayload.isAnsRequired = true;
+    }
+    window.parent.postMessage(JSON.stringify(messagePayload), '*');
+  }
+};
+
 function getPayload () {return JSON.parse(parseQueryString('p'))};
 
 function init() {
