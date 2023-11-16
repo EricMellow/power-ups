@@ -23,5 +23,6 @@ function init() {
       height: document.documentElement.scrollHeight,
     });
   const savedMessage = getPayload()
+  console.log(savedMessage)
   message.innerText = savedMessage.data?.config?.headline;
 }
