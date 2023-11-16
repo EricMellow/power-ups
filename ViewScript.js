@@ -15,6 +15,8 @@ function parseQueryString(key) {
   return url.searchParams.get(key);
 };
 
+function getPayload () {return JSON.parse(parseQueryString('p'))};
+
 function sendMessage(action, data = {}) {
   if (typeof window !== 'undefined') {
     const messagePayload = {
@@ -29,8 +31,6 @@ function sendMessage(action, data = {}) {
     window.parent.postMessage(JSON.stringify(messagePayload), '*');
   }
 };
-
-function getPayload () {return JSON.parse(parseQueryString('p'))};
 
 function init() {
   console.log('INIT!!!!!!')
