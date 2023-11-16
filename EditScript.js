@@ -5,15 +5,9 @@ var messageInput = document.querySelector('.search-input');
 saveButton.addEventListener('click', function() {save()});
 cancelButton.addEventListener('click', function() {cancel()});
 
-messageInput.addEventListener('input', function() {
-  console.log('hit', messageInput.value)
-})
-
 window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
   init()
 });
-
 
 function parseQueryString(key) {
   if (typeof window === 'undefined') {
@@ -42,12 +36,10 @@ function sendMessage(action, data = {}) {
 };
 
 function cancel() {
-  console.log('SEARCH CANCEL')
   sendMessage('cancel');
 }
 
 function init() {
-  console.log('INIT!!!!!!')
   sendMessage('ready', {
       height: document.documentElement.scrollHeight,
     });
@@ -56,8 +48,6 @@ function init() {
 function save() {
   const ansStarter = getPayload();
   const headline = messageInput.value
-  console.log(ansStarter)
-  console.log('HEADLINE', headline)
   const ansCustomEmbed = {
       ...ansStarter,
       config: {
