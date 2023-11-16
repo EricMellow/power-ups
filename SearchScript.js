@@ -1,5 +1,3 @@
-init()
-
 import * as ComposerHandler from './utils.js'
 
 var cancelButton = document.querySelector('.cancel-btn');
@@ -40,3 +38,4 @@ messageInput.addEventListener('input', function() {
   console.log('hit', messageInput.value)
 })
 
+init()
