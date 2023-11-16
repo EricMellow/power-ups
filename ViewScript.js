@@ -1,10 +1,8 @@
 var message = document.querySelector('.message');
 
 window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
   init()
 });
-
 
 function parseQueryString(key) {
   if (typeof window === 'undefined') {
@@ -33,11 +31,9 @@ function sendMessage(action, data = {}) {
 };
 
 function init() {
-  console.log('INIT!!!!!!')
   sendMessage('ready', {
       height: document.documentElement.scrollHeight,
     });
   const savedMessage = getPayload()
-  console.log(savedMessage)
   message.innerText = savedMessage?.config?.headline;
 }
