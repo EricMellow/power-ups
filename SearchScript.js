@@ -9,9 +9,11 @@ messageInput.addEventListener('input', function() {
   console.log('hit', messageInput.value)
 })
 
-window.onload = (event) => {
+window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
   init()
-};
+});
+
 
 function parseQueryString(key) {
   if (typeof window === 'undefined') {
